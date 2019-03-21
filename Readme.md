@@ -9,3 +9,9 @@ Also works with any Bibtex bibliographies (through pandoc-citeproc) and images y
 ```
 docker run --rm -v $(pwd):/source boardfish/md2pdf *.md
 ```
+
+It's also possible to set the `date` and other variables inline:
+
+```
+docker run --rm -v $(pwd):/source boardfish/md2pdf --variable date=$(date "+%Y-%m-%d") *.md
+```
